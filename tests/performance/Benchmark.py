@@ -15,7 +15,7 @@ for n in range(numOrders):
 from time import time
 start = time()
 for order in orders:
-	OB.processOrder(order)
+	OB.process_order(order)
 end = time()
 totalTime = (end-start)
 print("Time: " + str(totalTime))

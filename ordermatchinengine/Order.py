@@ -26,12 +26,12 @@ class MarketOrder(Order):
     def __init__(self, order_id: int, side: Side, size: int):
         super().__init__(order_id)
         self.side = side
-        self.size = self.remainingToFill = size
+        self.size = self.remaining = size
     
     def __repr__(self):
         return "Market Order: {0} {1} units.".format(
             "BUY" if self.side == Side.BUY else "SELL",
-            self.RemainingToFill)
+            self.remaining)
 
 
 
@@ -51,9 +51,9 @@ class LimitOrder(MarketOrder):
              return self.time < other.time
 
         elif self.size != other.size:
-            self.size < other.size
+            return self.size < other.size
 
     def __repr__(self):
         return 'Limit Order: {0} {1} units at {2}.'.format(
             "BUY" if self.side == Side.BUY else "SELL",
-            self.remainingToFill, self.price)
+            self.remaining, self.price)
