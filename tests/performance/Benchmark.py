@@ -1,6 +1,6 @@
-from OrderMatchingEngine import Order, Orderbook
+from ordermatchinengine import Orderbook, LimitOrder, Side
 
-from random import getrandbits, randint, random
+from random import getrandbits, randint
 
 # Benchmark
 OB = Orderbook()

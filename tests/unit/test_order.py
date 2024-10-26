@@ -1,4 +1,4 @@
-from OrderMatchingEngine import *
+from ordermatchinengine import *
 
 def test_initialStates():
     order = Order(1)
